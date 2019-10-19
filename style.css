@@ -12,6 +12,69 @@ footer{
 	margin: 20px;
 }
 
+div{
+	margin: 20px;
+	padding: 10px;
+}
+
+
+.pic_1{
+	float: right;
+	width: 50%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  /* make it stick
+  position: -webkit-sticky; /* Safari
+  position: sticky;
+  top: 0;
+  */
+  
+}
+
+h1{
+	padding:20px;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  box-shadow: 2px 2px 5px 2px grey;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+button{
+	background: blue;
+
+	float:left;
+
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+
+
+.div_Black{
+	background-color:black;
+	color:white;
+}
+
+
 /* "Die 3 Schritte"... */
 
 .td{
@@ -20,7 +83,7 @@ footer{
 }
 
 .tr{
-	margin:20px;
+	padding:20px;
 }
 
 
@@ -109,7 +172,7 @@ select{
 .form-style-1 input[type=submit], .form-style-1 input[type=button]{
 	background: blue;
 
-	align-self: left;
+	float:left;
 
 	padding: 8px 15px 8px 15px;
 	border: none;
