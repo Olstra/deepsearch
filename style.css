@@ -16,8 +16,8 @@ footer{
 }
 
 .container{
-	margin: 30px;
-	padding: 30px;
+	margin: 50px;
+	padding: 50px;
 }
 
 h1{
@@ -34,45 +34,46 @@ h1{
 
 img{
 	box-shadow: 0 0 8px grey;
-}
-
-.pic-right{
-	float: right;
+	border-radius: 10px;
 	width: 50%;
 }
 
-.pic-center{
-	width:50%;
-}
-
-.img-A, .img-B, .img-form{
+.pic-map{
 	position: absolute;
-	left: 33%;
+	left: 25%;
+	width: 920px;
+	height: 400px;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+}
+.img-form{
+
+	position: absolute;
+
 	z-index:1;
 
-	width: 700px;
-	height: 300px;
+
 	
 	box-shadow: none;
-	opacity: 0.2;
 }
 
 .img-form{
+	width: 550px;
+	height: 450px;
 
-	width: 500px;
-	height: 400px;
-	left: 37%;
-	height: 400px;
+	margin:0 auto;
+	margin-left:-270px;
+	margin-top: -20px;
 }
 
 /* Text at beginning of page, special layout */
 .pre-A{
 	text-align: left;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size: x-large;
+	font-size: xx-large;
 	font-weight: bold;
 
-	margin-left: -97px;
+	margin-left: -130px;
 }
 
 nav{
@@ -81,20 +82,21 @@ nav{
 }
 
 /*List (nav) */
-ul {
+ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  
-  /*make it stick (navbar)*/
-	/* position: -webkit-sticky; /* Safari
-	position: sticky;
-	top: 0; */
-  
+  overflow: hidden; 
 }
 
-li a {
+/* fixed navbar prototype...
+.ul-nav{	
+	position: fixed;  
+	background-color: white;
+	width: 100%;
+} */
+
+li a, .a-A {
   display: block;
   color: black;
   text-align: center;
@@ -105,10 +107,10 @@ li a {
 li a:hover:not(.active) {
 	border: 1px solid black;
 }
-.active {
-  background-color: #4CAF50;
-}
 
+li .a-A:hover:not(.active) {
+	border: none;
+}
 
 button{
 	background:#3c78d8;
@@ -127,37 +129,59 @@ button:hover{
 
 /* Black rounded background */
 .div_Black{
-	padding: 20px;
-	padding-bottom: 70px;
-	background-color:#081325;
+	background-color:#091C2E;
 	color:white;
-	border-radius:40%;
 
-	box-shadow: 2px 2px 10px 2px grey;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+	border-radius: 50%;
+
+	padding: 20px;
+	margin: 20px;
+
+	position: absolute;
+	width: 2762px;
+	height: 739px;
+	left: -20%; /*make ellipse start outside window*/
 }
 
 
 /* "Die 3 Schritte"... ************************************************/
-table{
-	border-spacing: 50px;
-	width: 100%;
+.info-boxes{
+	text-align: center;
+	margin:0 auto; /*put in center of page*/
 
-	position:relative;
-	z-index:5;
+	padding: 20px;
+	width:100%;
+
+	/*bg image*/
+	background-image: url( bg.png);
+	background-repeat: no-repeat;
+	background-size: 600px 500px;
+	background-position: center;
 }
 
-td{
-	padding: 10px;
-	box-shadow: 2px 2px 10px 2px grey;
+.info-boxes-item{
+	margin:0 auto;
+
 	background-color: white;
+	box-shadow: 2px 2px 10px 2px grey;
+	
+	width: 150px;
+	height:200px;
+
+	padding: 40px;
+	margin: 80px;
+	float: left;
 }
 
 .icon-A{
 	color:white;
-	background-color: lightblue; 
-	border-radius: 100%; 
+	background-color: #3399ff; 
+	border-radius: 50%; 
+	text-align: center;
 	font-size: large;
-	padding: 5px;
+	padding: 20px;
+	margin:20px;
 }
 
 
@@ -217,35 +241,36 @@ td{
 
 /* Image slider top ************************************************/
 .slide-holder{
-	width:400px;  /*set the size of our slide holder*/
-	height:200px;
+	width:700px;  /*size of slide holder*/
+	height:400px;
 	background-color:black;
 	margin:auto;
 	overflow:hidden;  /*hide overflowing pictures...*/
 }
 
-.slide-image { /*setup our individual images*/
+.slide-image { 
 	float:left;
 	margin:0px; 
 	padding:0px;
 	position:relative; 
 	z-index:1; 
 
-	width:400px;
+	width:700px;
 }
 
 .slider-button, .slider-button-big {
+	margin-top:10px;
+
 	display:inline-block;
-	height:7px;
-	width:7px;
+	height:12px;
+	width:12px;
 	background-color:lightgray;
 	border-radius:10px;
 }
 
 .slider-button-big{
-	background-color: grey;
-	height:9px;
-	width:9px;
+	height:14px;
+	width:14px;
 }
 
 #slide-1:target ~ .slide-group{ /*first button moves it to initial position*/
@@ -279,7 +304,7 @@ td{
 
 
 /* Form styling ************************************************/
-.form-A {
+.form-A, .form-B {
 	margin:10px auto;
 	max-width: 400px;
 	padding: 20px 12px 10px 20px;
@@ -288,6 +313,10 @@ td{
 	/*Put form infront of bg image*/
 	position:relative;
 	z-index:5;
+}
+
+.form-B{
+	position: absolute;
 }
 
 .form-A li {
@@ -335,13 +364,9 @@ td{
 	box-shadow: 2px 2px 5px 2px grey;
 	float:left;
 	padding: 8px 15px 8px 15px;
-	border: none;
 	color: #fff;
 }
 
 .form-A input[type=submit]:hover, .form-A input[type=button]:hover{
 	background: red;
-	box-shadow:none;
-	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
 }
