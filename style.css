@@ -154,7 +154,7 @@ button:hover{
 	width:100%;
 
 	/*bg image*/
-	background-image: url( bg.png);
+	background-image: url(images/bg.png);
 	background-repeat: no-repeat;
 	background-size: 600px 500px;
 	background-position: center;
