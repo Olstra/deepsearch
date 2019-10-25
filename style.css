@@ -1,372 +1,200 @@
-body{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	text-align: center;
-	scroll-behavior: smooth;
-}
-
-footer{
-	background-color: black;
-	color: white;
-	text-align: left;
-}
-
-.p_f{
-	margin-left: 100px;
-	padding: 10px;
-}
-
-.container{
-	margin: 50px;
-	padding: 50px;
-}
-
-h1{
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-
-.h1_A{
-	margin-top:100px;
-}
-
-
-/*Images*/
-
-img{
-	box-shadow: 0 0 8px grey;
-	border-radius: 10px;
-	width: 50%;
-}
-
-.pic-map{
-	position: absolute;
-	left: 25%;
-	width: 920px;
-	height: 400px;
-	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
-}
-.img-form{
-
-	position: absolute;
-
-	z-index:1;
-
-
-	
-	box-shadow: none;
-}
-
-.img-form{
-	width: 550px;
-	height: 450px;
-
-	margin:0 auto;
-	margin-left:-270px;
-	margin-top: -20px;
-}
-
-/* Text at beginning of page, special layout */
-.pre-A{
-	text-align: left;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size: xx-large;
-	font-weight: bold;
-
-	margin-left: -130px;
-}
-
-nav{
-	font-family: sans-serif;
-	margin-top:-50px;
-}
-
-/*List (nav) */
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; 
-}
-
-/* fixed navbar prototype...
-.ul-nav{	
-	position: fixed;  
-	background-color: white;
-	width: 100%;
-} */
-
-li a, .a-A {
-  display: block;
-  color: black;
+body {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 14px 16px;
+}
+
+header,
+h1,
+nav,
+article,
+section {
+  margin: 0;
+  padding: 20px;
+}
+
+footer {
+  color: white;
+  background: #091c2e;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Header part
+  Header
+  Logo
+  Navbar//////////////////////////////////// */
+
+/* For screen width < 60  0 */
+.header__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.div__logo {
+  padding: 20px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+}
+
+.ul__nav {
+  list-style-type: none;
+  display: flex; /* make another flex-box out of links */
+  flex-wrap: wrap; /* make links wrap for smaller screens */
+  align-items: right;
+}
+
+.li__nav {
+  margin: 10px;
+}
+
+.a__nav {
+  color: black;
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-	border: 1px solid black;
-}
-
-li .a-A:hover:not(.active) {
-	border: none;
-}
-
-button{
-	background:#3c78d8;
-	box-shadow: 0 0 8px grey;
-	float:left;
-
-	padding: 8px 15px 8px 15px;
-	border: none;
-	color: #fff;
-}
-
-button:hover{
-	background-color: red;
-}
-
-
-/* Black rounded background */
-.div_Black{
-	background-color:#091C2E;
-	color:white;
-
-	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
-	border-radius: 50%;
-
-	padding: 20px;
-	margin: 20px;
-
-	position: absolute;
-	width: 2762px;
-	height: 739px;
-	left: -20%; /*make ellipse start outside window*/
-}
-
-
-/* "Die 3 Schritte"... ************************************************/
-.info-boxes{
-	text-align: center;
-	margin:0 auto; /*put in center of page*/
-
-	padding: 20px;
-	width:100%;
-
-	/*bg image*/
-	background-image: url(images/bg.png);
-	background-repeat: no-repeat;
-	background-size: 600px 500px;
-	background-position: center;
-}
-
-.info-boxes-item{
-	margin:0 auto;
-
-	background-color: white;
-	box-shadow: 2px 2px 10px 2px grey;
-	
-	width: 150px;
-	height:200px;
-
-	padding: 40px;
-	margin: 80px;
-	float: left;
-}
-
-.icon-A{
-	color:white;
-	background-color: #3399ff; 
-	border-radius: 50%; 
-	text-align: center;
-	font-size: large;
-	padding: 20px;
-	margin:20px;
-}
-
-
-
-/* Image slider kunden ************************************************/
-#slider {
-	position: relative;
-	overflow: hidden;
-	margin: 20px auto 0 auto;
-	border-radius: 4px;
-
-	box-shadow: 2px 2px 10px 2px grey;
-  }
-  
-  #slider ul {
-	position: relative;
-	margin: 0;
-	padding: 0;
-	height: 200px;
-
-	
-  }
-  
-  #slider ul li {
-	position: relative;
-	display: block;
-	float: left;
-	margin: 0;
-	padding: 0;
-	width: 500px;
-	height: 200px;
-	text-align: center;
-	line-height: 300px;
-  }
-  
-  a.control_prev, a.control_next {
-	position: absolute;
-	top: 40%;
-	z-index: 10;
-	display: block;
-	padding: 15px;
-
-	width: 10px;
-	height: 10px;
-
-	border-radius: 100%;
-
-	box-shadow: 2px 2px 10px 2px grey;
-	background: white;
-	color:black;
-  } 
-  
-  a.control_next {
-	right: 0;
+@media screen and (min-width: 600px) {
+  .header__container {
+    flex-direction: row;
   }
 
+  nav {
+    width: 100%;
+  }
 
-/* Image slider top ************************************************/
-.slide-holder{
-	width:700px;  /*size of slide holder*/
-	height:400px;
-	background-color:black;
-	margin:auto;
-	overflow:hidden;  /*hide overflowing pictures...*/
+  .ul__nav {
+    justify-content: space-between; /* make links spread across nav width */
+  }
 }
 
-.slide-image { 
-	float:left;
-	margin:0px; 
-	padding:0px;
-	position:relative; 
-	z-index:1; 
-
-	width:700px;
+.text--blue {
+  color: #1681ff;
 }
 
-.slider-button, .slider-button-big {
-	margin-top:10px;
-
-	display:inline-block;
-	height:12px;
-	width:12px;
-	background-color:lightgray;
-	border-radius:10px;
+/* same styling for all buttons */
+button,
+.submit__button {
+  background: #1681ff;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin: 0;
 }
 
-.slider-button-big{
-	height:14px;
-	width:14px;
+/** main **************************************************/
+
+/* Bilder *******************************/
+.section__intro {
+  display: flex;
+  justify-content: center;
 }
 
-#slide-1:target ~ .slide-group{ /*first button moves it to initial position*/
-	left:0px; 
+/* intro text */
+.intro {
+  text-align: left;
+  margin: 20p;
+  padding: 20px;
 }
 
-#slide-2:target ~ .slide-group{ /*second image starts at 400px */
-	left:-400px;
-
+.image__container {
+  margin: 20px;
+  flex: 2/3;
 }
 
-#slide-3:target ~ .slide-group{ /*third image starts at 800px */
-	left:-800px;
-
+.image__intro {
+  width: 500px;
+  box-shadow: 0 0 8px grey;
 }
 
-.slide-group {
-	width:1200px;
-	height:400px;
-	position:relative;
-	clear:both;
-	z-index:0;
-	left:0px;
+/* 3 Schritte *******************************/
 
-	/*set transition property for all browsers */
-	-webkit-transition: left 2s;
-	-moz-transition: left 2s;
-	-o-transition: left 2s;
-	transition: left 2s;
+/* for screen width < 600px */
+.box__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* bg image */
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 650px; /* TODO fix dimensions of bg */
+  background-position: center;
 }
 
-
-/* Form styling ************************************************/
-.form-A, .form-B {
-	margin:10px auto;
-	max-width: 400px;
-	padding: 20px 12px 10px 20px;
-	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-
-	/*Put form infront of bg image*/
-	position:relative;
-	z-index:5;
+.box__item {
+  margin: 30px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
-.form-B{
-	position: absolute;
+@media screen and (min-width: 600px) {
+  .box__wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .box__item {
+    width: 15%;
+  }
 }
 
-.form-A li {
-	padding: 0;
-	display: block;
-	list-style: none;
-	margin: 10px 0 0 0;
+.link__info {
+  color: black;
+  text-decoration: underline;
 }
 
-.form-A input, textarea, select{
-	box-shadow: 2px 2px 5px 2px grey;
-
-	box-sizing: border-box;
-	border:1px;
-	padding: 7px;
-	margin:0px;
+/* Kontaktformular *******************************/
+.section__box {
+  align-items: center;
+  align-content: center;
 }
 
-.form-A input:focus,
-.form-A textarea:focus, 
-.form-A select:focus{
-	box-shadow: 0 0 8px blue;
-	border: 1px solid blue;
+form {
+  display: flex;
+  justify-content: center;
 }
 
-.form-A .field-divided{
-	width: 49%;
+.ul__form {
+  padding: 20px;
+  list-style-type: none;
+
+  /* bg image */
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 650px; /* TODO fix dimensions of bg */
+  background-position: center;
 }
 
-.form-A .field-long{
-	width: 100%;
+.li__form,
+.li__form-A {
+  display: flex;
+  padding: 5px;
+  text-align: left;
 }
 
-.form-A .field-textarea{
-	height: 200px;
+.li__form-A {
+  flex-direction: row;
 }
 
-.form-A .required{
-	color:red;
+.input--half,
+.input--full,
+.input__text {
+  box-shadow: 0 0 1  0 rgba(0, 0, 0, 0.2);
 }
 
-/*submit button*/
-.form-A input[type=submit], .form-A input[type=button]{
-	background: #3c78d8;
-	box-shadow: 2px 2px 5px 2px grey;
-	float:left;
-	padding: 8px 15px 8px 15px;
-	color: #fff;
+.input--full {
+  width: 100%;
 }
 
-.form-A input[type=submit]:hover, .form-A input[type=button]:hover{
-	background: red;
+.input__text {
+  width: 100%;
+  height: 100px;
 }
