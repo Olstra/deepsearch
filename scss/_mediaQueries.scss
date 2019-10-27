@@ -1,0 +1,12 @@
+/* save all media queries in one file 
+  - mobile
+  - TODO tablet
+  - TODO wide-screen 
+*/
+
+/* mobile media quiery */
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}

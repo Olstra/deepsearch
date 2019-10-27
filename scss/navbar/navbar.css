@@ -1,0 +1,40 @@
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+}
+
+.navigation__ul {
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* make links spread across nav width */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* make another flex-box out of links */
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.navigation__li {
+  margin: 10px;
+}
+
+.navigation__a {
+  text-decoration: none;
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  .navigation .navigation__a {
+    color: red;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

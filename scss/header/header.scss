@@ -1,0 +1,19 @@
+.header-a {
+  display: flex;
+  flex-direction: row;
+
+  &__logo {
+    font-weight: bold;
+  }
+}
+
+/* mobile navigation */
+@include mobile {
+  .header-a {
+    flex-direction: column;
+
+    &__logo {
+      font-size: xx-large;
+    }
+  }
+}

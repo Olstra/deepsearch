@@ -1,0 +1,50 @@
+/* 3 Schritte */
+.infoBox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* bg image */
+  background-image: url(media/images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 454px;
+  background-position: center;
+}
+
+.infoBox__item {
+  width: 200px;
+  height: 240px;
+  background: white;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.infoBox__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 15px;
+  background: rgba(22, 129, 255, 0.8);
+  color: white;
+}
+
+.infoBox__title {
+  font-size: 18px;
+  -webkit-text-emphasis: bold;
+          text-emphasis: bold;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.infoBox__p {
+  font-size: 14px;
+  line-height: 17px;
+}
+/*# sourceMappingURL=info_box.css.map */

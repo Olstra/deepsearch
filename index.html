@@ -2,7 +2,6 @@
 
 <html>
 
-
 <head>
     <meta charset="UTF-8">
 
@@ -12,169 +11,166 @@
     <title>deepsearch</title>
 </head>
 
-
-
 <body>
-
-
 
 <!--Header
         Logo
         Navigation bar-->
 <article>
-    <header class="header__container">
+    <header class="header-a">
         
         <!--Logo-->
-        <div class="div__logo">
+        <div class="header-a__logo">
             <p>deep<span class="text--blue">search</span></p>        
         </div>
     
         <!--Navbar-->
-        <nav>
-            <ul class="ul__nav">
-                <li class="li__nav"><a href="#" class="a__nav">WIE FUNKTIONIERT DEEPSEARCH</a></li>
-                <li class="li__nav"><a href="#" class="a__nav">LÖSUNGEN</a></li>
-                <li class="li__nav"><a href="#" class="a__nav">PREISE</a></li>
-                <li class="li__nav"><a href="#" class="a__nav">KONTAKT</a></li>
+        <nav class="navigation">
+            <ul class="navigation__ul">
+
+                <!--FRAGE: was kann man hier anstatt ID's benutzen? 
+                    auf dem Artikel war nur die Rede davon, dass man Klassen für das Styling benutzen soll (anstatt IDs)-->
+
+                <li class="navigation__li"><a href="#wie" class="navigation__a">WIE FUNKTIONIERT DEEPSEARCH</a></li>
+                <li class="navigation__li"><a href="#loesungen" class="navigation__a">LÖSUNGEN</a></li>
+                <li class="navigation__li"><a href="#preise" class="navigation__a">PREISE</a></li>
+                <li class="navigation__li"><a href="#kontakt" class="navigation__a">KONTAKT</a></li>
             </ul>
         </nav>
+
     </header>
 </article>
-
-
 
 <!--Main content-->
     <article class="article__main">
         
-        <section class="section__intro">
-            <!--Intro text-->     
-            <div class="intro">
+        <!--Intro text-->
+        <section class="intro">
+     
+            <div class="intro__text">
                 Finde alle<br>
                 <span  class="text--blue">Lebensmittelhändler</span><br>
                 in <u>Zürich</u><br><br>
 
-                <p>Mit deepsearch findest du die passenden Geschäfte<br>mit nur einem Klick.</p><br>
+                <p class="intro__p">Mit deepsearch findest du die passenden Geschäfte<br>mit nur einem Klick.</p><br>
 
                 <button>Suchanfrage starten</button>
             </div>
-            
 
-            <div class="image__container">
-                <img src="images/picture.jpg" alt="No Picture available" class="image__intro">
+            <div class="intro__image__container">
+                <img src="media/images/picture.jpg" alt="No Picture available" class="intro__image">
             </div>
         </section>
         
-        
-        
         <!--Drei Schritte-->
-        <section class="section__box">
+        <section class="infoBox" id="wie">
             <h1>Passende Informationen in nur drei Schritten</h1>
 
-            <section class="box__wrapper">
+            <section class="infoBox__wrapper">
 
-                <div class="box__item">
-                    (1)<br><br><b>Ziel definieren</b><br><br>
-                    Wähle einen Standort und Geschäftsgebiet um die Suche zu starten.
+                <div class="infoBox__item">
+                    <br><br><i class="icon">(1)</i><br><br><br>
+                    <p class="infoBox__title">Ziel definieren</p><br>
+                    <p class="infoBox__p">Wähle einen Standort und Geschäftsgebiet um die Suche zu starten.</p>
                 </div>
 
-                <div class="box__item">
-                    (2)<br><br><b>Auftrag erteilen</b><br><br>
-                    Bist du mit dem Preis einverstanden? Klicke "Jetzt bezahlen" um den Auftrag zu bestätigen.
+                <div class="infoBox__item">
+                    <br><br><i class="icon">(2)</i><br><br><br>
+                    <p class="infoBox__title">Auftrag erteilen</p><br>
+                    <p class="infoBox__p">Bist du mit dem Preis einverstanden? Klicke "Jetzt bezahlen" um den Auftrag zu bestätigen.</p>
                 </div>
 
-                <div class="box__item">
-                    (3)<br><br><b>Daten erhalten</b><br><br>
-                    Erhalte die Daten per Mail als CSV, Excel oder PDF innerhalb eines Tages.
+                <div class="infoBox__item">
+                    <br><br><i class="icon">(3)</i><br><br><br>
+                    <p class="infoBox__title">Daten erhalten</p><br>
+                    <p class="infoBox__p">Erhalte die Daten per Mail als CSV, Excel oder PDF innerhalb eines Tages.</p>
                 </div>
 
             </section>
         </section>
     
-
         <!--Einsatzgebiete-->
-        <section class="section__box">
+        <section class="infoBox" id="loesungen">
             <h1>Einsatzgebiete von deepsearch</h1>
 
-            <section class="box__wrapper">
+            <section class="infoBox__wrapper">
 
-                <div class="box__item">
-                    &star;<br><br><b>Konkurrenzanalyse</b><br><br>
-                    Finde heraus, wo deine Mitbewerber lokalisiert sind.
+                <div class="infoBox__item">
+                    <br><br><i class="icon">&star;</i><br><br><br>
+                    <p class="infoBox__title">Konkurrenzanalyse</p><br>
+                    <p class="infoBox__p">Finde heraus, wo deine Mitbewerber lokalisiert sind.</p>
                 </div>
 
-                <div class="box__item">
-                    &star;<br><br><b>Expansionsanayse</b><br><br>
-                    Finde heraus, wo du deinen nächsten Standort errichten solltest.
+                <div class="infoBox__item">
+                    <br><br><i class="icon">&star;</i><br><br><br>
+                    <p class="infoBox__title">Expansionsanayse</p><br>
+                    <p class="infoBox__p">Finde heraus, wo du deinen nächsten Standort errichten solltest.</p>
                 </div>
 
-                <div class="box__item">
-                    &star;<br><br><b>Kaltaquise / Sales</b><br><br>
-                    Finde Geschäfte, die Interesse an deinen Produkten oder Dienstleisungen haben könnten.
+                <div class="infoBox__item">
+                    <br><br><i class="icon">&star;</i><br><br><br>
+                    <p class="infoBox__title">Kaltaquise / Sales</p><br>
+                    <p class="infoBox__p">Finde Geschäfte, die Interesse an deinen Produkten oder Dienstleisungen haben könnten.</p>
                 </div>
 
             </section>
 
-            <a href="" class="link__info">Lerne weitere Einsatzgebiete kennen</a>
+            <a href="" class="infoBox__link">Lerne weitere Einsatzgebiete kennen</a>
 
         </section>
 
-
         <!--Preis berechnen-->	
-        <section>
+        <section id="preise">
             <h1>Jetzt Preis berechnen</h1>
 
             <div class="image__container">
-                <img src="images/map.png" alt="No Picture available" class="image__intro">
+                <img src="media/images/map.png" alt="No Picture available" class="image__intro">
             </div>
         </section>
-
 
         <!--Kunden-->	
         <section>
             <h1>Kunden, die unseren Service nutzen</h1>
 
             <div class="image__container">
-                <img src="images/picture.jpg" alt="No Picture available" class="image__intro">
+                <img src="media/images/picture.jpg" alt="No Picture available" class="image__intro">
             </div>
         </section>
 
-
         <!--Kontakt-->	
-        <section class="section__box">
+        <section class="contactForm" id="kontakt">
             <h1>Offene Frage? Kontaktiere uns:</h1>
 
             <!--Kontaktformular-->
-                <form>
-                    <ul class="ul__form">	
-                        <li class="li__form-A">
+                <form class="contactForm__form">
+                    <ul class="contactForm__ul">	
+                        <li class="contactForm__li-a">
                             <!--Vorname-->
-                            <input type="text" name="field1" placeholder="Vorname" class="input--half" /> 
+                            <input type="text" name="field1" placeholder="Vorname" class="contactForm__input--half" /> 
                             <!--Nachname-->
-                            <input type="text" name="field2" placeholder="Nachname" class="input--half" />
+                            <input type="text" name="field2" placeholder="Nachname" class="contactForm__input--half" />
                         </li>
-                        <li class="li__form">
+                        <li class="contactForm__li">
                             <!--E-Mail-->
-                            <input type="email" name="field3" placeholder="E-Mail" class="input--full" />
+                            <input type="email" name="field3" placeholder="E-Mail" class="contactForm__input--full" />
                         </li>
-                        <li class="li__form">
+                        <li class="contactForm__li">
                             <!--Telefon-->
-                            <input type="text" name="field4" placeholder="Telefon" class="input--full" />
+                            <input type="text" name="field4" placeholder="Telefon" class="contactForm__input--full" />
                         </li>
-                        <li class="li__form">
+                        <li class="contactForm__li">
                             <!--Nachricht-->
-                            <textarea name="field5" name="field5" placeholder="Nachricht" class="input__text"></textarea>
+                            <textarea name="field5" name="field5" placeholder="Nachricht" class="contactForm__text"></textarea>
                         </li>
     
-                        <li class="li__form">
-                            <input type="submit" value="Anfrage versenden"class="submit__button" />
+                        <li class="contactForm__li">
+                            <input type="submit" value="Anfrage versenden"class="contactForm__button" />
                         </li>
                     </ul>
                 </form>
         </section>
 
     </article>
-
-
 
 <!--Footer-->
 <footer>

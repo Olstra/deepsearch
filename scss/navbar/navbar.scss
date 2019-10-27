@@ -1,0 +1,40 @@
+.navigation {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  font-size: 16px;
+
+  &__ul {
+    list-style-type: none;
+    justify-content: space-between; /* make links spread across nav width */
+    display: flex; /* make another flex-box out of links */
+    align-items: right;
+  }
+
+  &__li {
+    margin: 20px;
+  }
+
+  &__a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+/* mobile query */
+@include mobile {
+  .navigation {
+    justify-content: center;
+
+    &__ul {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    &__li {
+      margin: 10px;
+      border: 1px solid black; /* add margin ass visual help for tocuh */
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/* same styling for all buttons 
+  - normal buttons
+  - contact form submit button
+*/
+
+button,
+.contactForm__button {
+  background: #1681ff;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin: 0;
+}

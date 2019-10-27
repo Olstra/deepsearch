@@ -1,16 +1,86 @@
+/* import all .scss files needed for website */
+/* save all media queries in one file 
+  - mobile
+  - TODO tablet
+  - TODO wide-screen 
+*/
+/* mobile media quiery */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
 header,
 h1,
+div,
 nav,
 article,
 section {
-  margin: 0;
+  margin: 20px;
   padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #091C2E;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+  nav {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.text--blue {
+  color: #1681ff;
+}
+
+/* same styling for all buttons 
+  - normal buttons
+  - contact form submit button
+*/
+button,
+.contactForm__button {
+  background: #1681ff;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin: 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 15px;
+  background: rgba(22, 129, 255, 0.8);
+  color: white;
+}
+
+img {
+  width: 500px;
+  -webkit-box-shadow: 0 0 8px grey;
+          box-shadow: 0 0 8px grey;
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 300px;
+  }
 }
 
 footer {
@@ -20,181 +90,260 @@ footer {
   padding: 20px;
 }
 
-/* Header part
-  Header
-  Logo
-  Navbar//////////////////////////////////// */
+/* Kontaktformular 
+  (submit button defined under /elements/buttons.scss) */
+.contactForm {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
 
-/* For screen width < 60  0 */
-.header__container {
+.contactForm__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.div__logo {
-  padding: 20px;
-  font-weight: bold;
-}
-
-nav {
-  display: flex;
-  justify-content: right;
-}
-
-.ul__nav {
+.contactForm__ul {
   list-style-type: none;
-  display: flex; /* make another flex-box out of links */
-  flex-wrap: wrap; /* make links wrap for smaller screens */
-  align-items: right;
-}
-
-.li__nav {
-  margin: 10px;
-}
-
-.a__nav {
-  color: black;
-  text-decoration: none;
-}
-
-@media screen and (min-width: 600px) {
-  .header__container {
-    flex-direction: row;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  .ul__nav {
-    justify-content: space-between; /* make links spread across nav width */
-  }
-}
-
-.text--blue {
-  color: #1681ff;
-}
-
-/* same styling for all buttons */
-button,
-.submit__button {
-  background: #1681ff;
-  color: white;
-  border: none;
-  text-decoration: none;
-  padding: 5px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  margin: 0;
-}
-
-/** main **************************************************/
-
-/* Bilder *******************************/
-.section__intro {
-  display: flex;
-  justify-content: center;
-}
-
-/* intro text */
-.intro {
-  text-align: left;
-  margin: 20p;
-  padding: 20px;
-}
-
-.image__container {
-  margin: 20px;
-  flex: 2/3;
-}
-
-.image__intro {
-  width: 500px;
-  box-shadow: 0 0 8px grey;
-}
-
-/* 3 Schritte *******************************/
-
-/* for screen width < 600px */
-.box__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
   /* bg image */
-  background-image: url(images/bg.png);
+  background-image: url(media/images/bg.png);
   background-repeat: no-repeat;
-  background-size: 650px; /* TODO fix dimensions of bg */
+  background-size: 650px;
+  /* TODO fix dimensions of bg */
   background-position: center;
 }
 
-.box__item {
-  margin: 30px;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (min-width: 600px) {
-  .box__wrapper {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .box__item {
-    width: 15%;
-  }
-}
-
-.link__info {
-  color: black;
-  text-decoration: underline;
-}
-
-/* Kontaktformular *******************************/
-.section__box {
-  align-items: center;
-  align-content: center;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-}
-
-.ul__form {
-  padding: 20px;
-  list-style-type: none;
-
-  /* bg image */
-  background-image: url(images/bg.png);
-  background-repeat: no-repeat;
-  background-size: 650px; /* TODO fix dimensions of bg */
-  background-position: center;
-}
-
-.li__form,
-.li__form-A {
+.contactForm__li, .contactForm__li-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 5px;
   text-align: left;
 }
 
-.li__form-A {
-  flex-direction: row;
+.contactForm__li-a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.input--half,
-.input--full,
-.input__text {
-  box-shadow: 0 0 1  0 rgba(0, 0, 0, 0.2);
+.contactForm__input--half, .contactForm__input--full, .contactForm__input__text {
+  padding: 10px;
+  -webkit-box-shadow: 0 0 1 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1 0 rgba(0, 0, 0, 0.2);
 }
 
-.input--full {
+.contactForm__input--full {
   width: 100%;
 }
 
-.input__text {
+.contactForm__text {
   width: 100%;
   height: 100px;
 }
+
+@media (max-width: 600px) {
+  .contactForm__li-a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactForm__input--half, .contactForm__input--full, .contactForm__input__text {
+    width: 200px;
+  }
+}
+
+.header-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header-a__logo {
+  font-weight: bold;
+}
+
+/* mobile navigation */
+@media (max-width: 600px) {
+  .header-a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-a__logo {
+    font-size: xx-large;
+  }
+}
+
+/* the 3 info boxes (passende informationen...) */
+.infoBox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* bg image */
+  background-image: url(media/images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 454px;
+  background-position: center;
+}
+
+.infoBox__item {
+  width: 200px;
+  height: 240px;
+  background: white;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.infoBox__title {
+  font-size: 18px;
+  -webkit-text-emphasis: bold;
+          text-emphasis: bold;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.infoBox__p {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.infoBox__link {
+  text-decoration: underline;
+  color: black;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .infoBox__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro__text {
+  text-align: left;
+  font-size: 48px;
+}
+
+.intro__p {
+  font-size: 20px;
+}
+
+.intro__image {
+  width: 600px;
+  height: 500px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro__text {
+    text-align: center;
+    font-size: 22px;
+  }
+  .intro__p {
+    font-size: 14px;
+  }
+  .intro__image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+  font-size: 16px;
+}
+
+.navigation__ul {
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* make links spread across nav width */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* make another flex-box out of links */
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.navigation__li {
+  margin: 20px;
+}
+
+.navigation__a {
+  text-decoration: none;
+  color: black;
+}
+
+/* mobile query */
+@media (max-width: 600px) {
+  .navigation {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navigation__ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .navigation__li {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

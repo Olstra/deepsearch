@@ -1,0 +1,63 @@
+/* Kontaktformular
+  (submit button defined under /elements/buttons.scss) */
+
+.contactForm {
+  align-items: center;
+  align-content: center;
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__ul {
+    list-style-type: none;
+
+    /* bg image */
+    background-image: url(media/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 650px; /* TODO fix dimensions of bg */
+    background-position: center;
+  }
+
+  &__li,
+  &__li-a {
+    display: flex;
+    padding: 5px;
+    text-align: left;
+  }
+
+  &__li-a {
+    flex-direction: row;
+  }
+
+  &__input--half,
+  &__input--full,
+  &__input__text {
+    padding: 10px;
+    box-shadow: 0 0 1  0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__input--full {
+    width: 100%;
+  }
+
+  &__text {
+    width: 100%;
+    height: 100px;
+  }
+}
+
+@include mobile {
+  .contactForm {
+    &__li-a {
+      flex-direction: column;
+    }
+
+    &__input--half,
+    &__input--full,
+    &__input__text {
+      width: 200px;
+    }
+  }
+}

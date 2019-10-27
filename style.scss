@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* import all .scss files needed for website */
+
+@import "scss/mediaQueries";
+
+@import "scss/generic.scss";
+@import "scss/elements/all";
+@import "scss/footer/all";
+@import "scss/form/all";
+@import "scss/header/all";
+@import "scss/info_boxs/all";
+@import "scss/intro/all";
+@import "scss/navbar/all";

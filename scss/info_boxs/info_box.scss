@@ -1,0 +1,51 @@
+/* the 3 info boxes (passende informationen...) */
+
+.infoBox {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* bg image */
+    background-image: url(media/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: 454px;
+    background-position: center;
+  }
+
+  &__item {
+    width: 200px;
+    height: 240px;
+
+    background: white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  &__title{
+    font-size: 18px;
+    text-emphasis: bold;
+    font-weight: bold;
+
+    line-height: 20px;
+  }
+
+  &__p{
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: black;
+    font-size: 16px;
+  }
+}
+
+@include mobile {
+  .infoBox {
+    &__wrapper {
+      flex-direction: column;
+    }
+  }
+}
