@@ -1,0 +1,10 @@
+$col-dark: #091c2e;
+
+.blackEllispe {
+  background: $col-dark;
+  border-radius: 30%;
+
+  &__h {
+    color: white;
+  }
+}

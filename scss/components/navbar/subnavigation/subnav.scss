@@ -1,0 +1,65 @@
+$radius: 2px;
+$col-shadow: rgb(219, 219, 219);
+$col-dark: #091c2e;
+
+.subnav {
+  margin: 20px;
+  padding: 20px;
+  font-size: medium;
+  display: none; /* hide */
+  position: absolute;
+
+  &__li {
+    background: $col-dark;
+    border: 1px solid white;
+    border-radius: $radius;
+    padding: 20px;
+    margin: 0;
+    width: 200px;
+
+    &:hover {
+      color: $col-shadow;
+      animation: animation-a 1s;
+
+      .subnav__a {
+        color: $col-shadow;
+        animation: animation-a 1s;
+      }
+    }
+  }
+
+  &__a {
+    text-decoration: none;
+    color: white;
+    background: $col-dark;
+  }
+}
+
+/* display subnav when hovering over navbar item */
+.navigation__li {
+  /* center subnav */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  &:hover {
+    border: 1px solid $col-dark;
+    border-radius: $radius;
+  }
+}
+
+.navigation__li:hover .subnav {
+  display: block;
+}
+
+@keyframes animation-a {
+  0% {
+    background-color: grey;
+    border-radius: $radius;
+  }
+
+  100% {
+    background-color: $col-dark;
+    border-radius: $radius;
+  }
+}

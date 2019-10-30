@@ -5,45 +5,55 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <title>deepsearch</title>
 </head>
 
+
 <body>
-
-<!--Header
-        Logo
-        Navigation bar-->
-<article>
-    <header class="header-a">
-        
-        <!--Logo-->
-        <div class="header-a__logo">
-            <p>deep<span class="text--blue">search</span></p>        
-        </div>
-    
-        <!--Navbar-->
-        <nav class="navigation">
-            <ul class="navigation__ul">
-
-                <!--FRAGE: was kann man hier anstatt ID's benutzen? 
-                    auf dem Artikel war nur die Rede davon, dass man Klassen für das Styling benutzen soll (anstatt IDs)-->
-
-                <li class="navigation__li"><a href="#wie" class="navigation__a">WIE FUNKTIONIERT DEEPSEARCH</a></li>
-                <li class="navigation__li"><a href="#loesungen" class="navigation__a">LÖSUNGEN</a></li>
-                <li class="navigation__li"><a href="#preise" class="navigation__a">PREISE</a></li>
-                <li class="navigation__li"><a href="#kontakt" class="navigation__a">KONTAKT</a></li>
-            </ul>
-        </nav>
-
-    </header>
-</article>
 
 <!--Main content-->
     <article class="article__main">
         
+        <!--Header
+                Logo
+                Navigation bar-->
+        <header class="header-a">
+        
+            <!--Logo-->
+            <div class="header-a__logo">
+                <p>deep<span class="text--blue">search</span></p>
+            </div>
+        
+            <!--Navbar-->
+            <nav class="navigation">
+                <ul class="navigation__ul">
+                    <!--FRAGE: was kann man hier anstatt ID's benutzen? 
+                            auf dem Artikel war nur die Rede davon, dass man Klassen für das Styling benutzen soll (anstatt IDs)-->
+                    <li class="navigation__li"><a href="#wie" class="navigation__a">WIE FUNKTIONIERT DEEPSEARCH</a>
+                        <ul class="subnav">
+                            <li class="subnav__li" style="margin-top: 14px;"><a href="#" class="subnav__a">Schritt 1</a></li>
+                            <li class="subnav__li"><a href="#" class="subnav__a">Schritt 2</a></li>
+                            <li class="subnav__li"><a href="#" class="subnav__a">Schritt 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__li"><a href="#" class="navigation__a">LÖSUNGEN</a>
+                        <ul class="subnav">
+                            <li class="subnav__li" style="margin-top: 14px;"><a href="#" class="subnav__a">Lösung 1</a></li>
+                            <li class="subnav__li"><a href="#" class="subnav__a">Lösung 2</a></li>
+                            <li class="subnav__li"><a href="#" class="subnav__a">Lösung 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__li"><a href="#preise" class="navigation__a">PREISE</a></li>
+                    <li class="navigation__li"><a href="#kontakt" class="navigation__a">KONTAKT</a></li>
+                </ul>
+            </nav>
+        
+        </header>
+
+
         <!--Intro text-->
         <section class="intro">
      
@@ -57,10 +67,11 @@
                 <button>Suchanfrage starten</button>
             </div>
 
-            <div class="intro__image__container">
+            <div class="intro__image-container">
                 <img src="media/images/picture.jpg" alt="No Picture available" class="intro__image">
             </div>
         </section>
+
         
         <!--Drei Schritte-->
         <section class="infoBox" id="wie">
@@ -88,6 +99,7 @@
 
             </section>
         </section>
+
     
         <!--Einsatzgebiete-->
         <section class="infoBox" id="loesungen">
@@ -119,14 +131,16 @@
 
         </section>
 
+
         <!--Preis berechnen-->	
-        <section id="preise">
-            <h1>Jetzt Preis berechnen</h1>
+        <section id="preise" class="blackEllispe">
+            <h1 class="blackEllispe__h">Jetzt Preis berechnen</h1>
 
             <div class="image__container">
                 <img src="media/images/map.png" alt="No Picture available" class="image__intro">
             </div>
         </section>
+
 
         <!--Kunden-->	
         <section>
@@ -136,6 +150,7 @@
                 <img src="media/images/picture.jpg" alt="No Picture available" class="image__intro">
             </div>
         </section>
+
 
         <!--Kontakt-->	
         <section class="contactForm" id="kontakt">

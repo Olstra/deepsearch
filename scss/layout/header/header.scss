@@ -1,9 +1,13 @@
 .header-a {
   display: flex;
   flex-direction: row;
+  font-family: sans-serif;
 
   &__logo {
     font-weight: bold;
+    font-size: 20px;
+    align-self: left;
+    margin: 0;
   }
 }
 
@@ -14,6 +18,8 @@
 
     &__logo {
       font-size: xx-large;
+      margin: 0;
+      padding: 0;
     }
   }
 }

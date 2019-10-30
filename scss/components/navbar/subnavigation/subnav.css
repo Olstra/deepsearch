@@ -1,0 +1,79 @@
+.subnav {
+  margin: 20px;
+  padding: 20px;
+  font-size: medium;
+  display: none;
+  /* hide */
+  position: absolute;
+}
+
+.subnav__li {
+  background: #091c2e;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 20px;
+  margin: 0;
+  width: 200px;
+}
+
+.subnav__li:hover {
+  color: #dbdbdb;
+  -webkit-animation: animation-a 1s;
+          animation: animation-a 1s;
+}
+
+.subnav__li:hover .subnav__a {
+  color: #dbdbdb;
+  -webkit-animation: animation-a 1s;
+          animation: animation-a 1s;
+}
+
+.subnav__a {
+  text-decoration: none;
+  color: white;
+  background: #091c2e;
+}
+
+/* display subnav when hovering over navbar item */
+.navigation__li {
+  /* center subnav */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.navigation__li:hover {
+  border: 1px solid #091c2e;
+  border-radius: 2px;
+}
+
+.navigation__li:hover .subnav {
+  display: block;
+}
+
+@-webkit-keyframes animation-a {
+  0% {
+    background-color: grey;
+    border-radius: 2px;
+  }
+  100% {
+    background-color: #091c2e;
+    border-radius: 2px;
+  }
+}
+
+@keyframes animation-a {
+  0% {
+    background-color: grey;
+    border-radius: 2px;
+  }
+  100% {
+    background-color: #091c2e;
+    border-radius: 2px;
+  }
+}
+/*# sourceMappingURL=subnav.css.map */

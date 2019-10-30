@@ -1,0 +1,15 @@
+/* short animation effect for subnavigation menu */
+
+@mixin animation-effect {
+  @keyframes animation-a {
+    0% {
+      background-color: grey;
+      border-radius: $radius;
+    }
+
+    100% {
+      background-color: $col-dark;
+      border-radius: $radius;
+    }
+  }
+}

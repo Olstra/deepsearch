@@ -24,11 +24,23 @@ h1 {
 
 @include mobile {
   h1 {
-    font-size: 32px;
+    font-size: large;
+    text-align: center;
   }
 
   nav {
-    margin: 10px;
-    padding: 10px;
+    margin: $margin;
+    padding: $padding;
+  }
+}
+
+@include widescreen {
+  header,
+  h1,
+  div,
+  nav,
+  article,
+  section {
+    align-self: center;
   }
 }

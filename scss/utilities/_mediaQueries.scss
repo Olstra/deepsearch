@@ -1,0 +1,19 @@
+/* save all media queries in one file
+  - mobile
+  - TODO tablet
+  - TODO wide-screen
+*/
+
+/* mobile media query */
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+/* wide screen media query */
+@mixin widescreen {
+  @media (min-width: 1680px) {
+    @content;
+  }
+}

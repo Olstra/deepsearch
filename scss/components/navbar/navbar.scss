@@ -1,0 +1,46 @@
+.navigation {
+  display: flex;
+  justify-content: right;
+  font-size: 16px;
+  margin: 0;
+
+  &__ul {
+    list-style-type: none;
+    display: flex; /* make another flex-box out of links */
+    justify-content: space-between; /* make links spread across nav width */
+    align-items: right;
+  }
+
+  &__li {
+    width: 200px;
+  }
+
+  &__a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+/* mobile query */
+@include mobile {
+  .navigation {
+    margin-bottom: -50px; /* TODO "fix" so div is not too far appart */
+    align-self: center;
+
+    &__ul {
+      flex-direction: column;
+      background: #091c2e;
+    }
+
+    &__li {
+      margin: 0;
+      border: 1px solid white; /* add margin ass visual help for tocuh */
+      border-radius: 2px;
+      padding: 10px;
+    }
+
+    &__a {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,507 @@
+/* import all .scss files needed for website */
+/* save all media queries in one file
+  - mobile
+  - TODO tablet
+  - TODO wide-screen
+*/
+/* mobile media query */
+/* wide screen media query */
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+header,
+h1,
+div,
+nav,
+article,
+section {
+  margin: 20px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #091c2e;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: large;
+    text-align: center;
+  }
+  nav {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1680px) {
+  header,
+  h1,
+  div,
+  nav,
+  article,
+  section {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+/* the 3 info boxes (passende informationen...) */
+.infoBox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* bg image */
+  background-image: url(../../media/images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 454px;
+  background-position: center;
+}
+
+.infoBox__item {
+  width: 200px;
+  height: 240px;
+  background: white;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.infoBox__title {
+  font-size: 18px;
+  -webkit-text-emphasis: bold;
+          text-emphasis: bold;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.infoBox__p {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.infoBox__link {
+  text-decoration: underline;
+  color: black;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .infoBox__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .infoBox__item {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 20px;
+    width: 150px;
+    height: 200px;
+  }
+  .infoBox__title {
+    font-size: 14px;
+  }
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  font-size: 16px;
+  margin: 0;
+}
+
+.navigation__ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* make another flex-box out of links */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* make links spread across nav width */
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+}
+
+.navigation__li {
+  width: 200px;
+}
+
+.navigation__a {
+  text-decoration: none;
+  color: black;
+}
+
+/* mobile query */
+@media (max-width: 600px) {
+  .navigation {
+    margin-bottom: -50px;
+    /* TODO "fix" so div is not too far appart */
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .navigation__ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #091c2e;
+  }
+  .navigation__li {
+    margin: 0;
+    border: 1px solid white;
+    /* add margin ass visual help for tocuh */
+    border-radius: 2px;
+    padding: 10px;
+  }
+  .navigation__a {
+    color: white;
+  }
+}
+
+.subnav {
+  margin: 20px;
+  padding: 20px;
+  font-size: medium;
+  display: none;
+  /* hide */
+  position: absolute;
+}
+
+.subnav__li {
+  background: #091c2e;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 20px;
+  margin: 0;
+  width: 200px;
+}
+
+.subnav__li:hover {
+  color: #dbdbdb;
+  -webkit-animation: animation-a 1s;
+          animation: animation-a 1s;
+}
+
+.subnav__li:hover .subnav__a {
+  color: #dbdbdb;
+  -webkit-animation: animation-a 1s;
+          animation: animation-a 1s;
+}
+
+.subnav__a {
+  text-decoration: none;
+  color: white;
+  background: #091c2e;
+}
+
+/* display subnav when hovering over navbar item */
+.navigation__li {
+  /* center subnav */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.navigation__li:hover {
+  border: 1px solid #091c2e;
+  border-radius: 2px;
+}
+
+.navigation__li:hover .subnav {
+  display: block;
+}
+
+@-webkit-keyframes animation-a {
+  0% {
+    background-color: grey;
+    border-radius: 2px;
+  }
+  100% {
+    background-color: #091c2e;
+    border-radius: 2px;
+  }
+}
+
+@keyframes animation-a {
+  0% {
+    background-color: grey;
+    border-radius: 2px;
+  }
+  100% {
+    background-color: #091c2e;
+    border-radius: 2px;
+  }
+}
+
+/* short animation effect for subnavigation menu */
+.blackEllispe {
+  background: #091c2e;
+  border-radius: 30%;
+}
+
+.blackEllispe__h {
+  color: white;
+}
+
+.text--blue {
+  color: #1681ff;
+}
+
+/* same styling for all buttons
+  - normal buttons
+  - contact form submit button
+*/
+button,
+.contactForm__button {
+  background: #1681ff;
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin: 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 15px;
+  background: rgba(22, 129, 255, 0.8);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .icon {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+img {
+  width: 500px;
+  -webkit-box-shadow: 0 0 8px grey;
+          box-shadow: 0 0 8px grey;
+}
+
+@media (max-width: 600px) {
+  .image__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  img {
+    height: 100%;
+  }
+}
+
+/* Kontaktformular
+  (submit button defined under /elements/buttons.scss) */
+.contactForm {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.contactForm__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactForm__ul {
+  list-style-type: none;
+  /* bg image */
+  background-image: url(../../media/images/bg.png);
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: center;
+}
+
+.contactForm__li, .contactForm__li-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  text-align: left;
+}
+
+.contactForm__li-a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contactForm__input--half, .contactForm__input--full, .contactForm__input__text {
+  padding: 10px;
+  -webkit-box-shadow: 0 0 1 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1 0 rgba(0, 0, 0, 0.2);
+}
+
+.contactForm__input--full {
+  width: 100%;
+}
+
+.contactForm__text {
+  width: 100%;
+  height: 100px;
+}
+
+@media (max-width: 600px) {
+  .contactForm__li-a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactForm__input--half, .contactForm__input--full, .contactForm__input__text {
+    width: 200px;
+  }
+}
+
+.header-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: sans-serif;
+}
+
+.header-a__logo {
+  font-weight: bold;
+  font-size: 20px;
+  -ms-flex-item-align: left;
+      -ms-grid-row-align: left;
+      align-self: left;
+  margin: 0;
+}
+
+/* mobile navigation */
+@media (max-width: 600px) {
+  .header-a {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-a__logo {
+    font-size: xx-large;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.intro__text {
+  text-align: left;
+  font-size: 48px;
+}
+
+.intro__p {
+  font-size: 20px;
+}
+
+.intro__image {
+  width: 600px;
+  height: 500px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .intro__text {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
+  .intro__p {
+    font-size: 14px;
+  }
+  .intro__image-container {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .intro__image {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+footer {
+  color: white;
+  background: #091c2e;
+  text-align: left;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
